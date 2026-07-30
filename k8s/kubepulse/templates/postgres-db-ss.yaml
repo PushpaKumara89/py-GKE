@@ -44,6 +44,9 @@ spec:
             name: {{ .Release.Name }}-config
         - secretRef:
             name: {{ .Release.Name }}-secret
+        env:
+        - name: PGDATA
+          value: /var/lib/postgresql/data/pgdata
         volumeMounts:
         - name: data
           mountPath: /var/lib/postgresql/data
