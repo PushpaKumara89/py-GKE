@@ -22,6 +22,8 @@ frontend:
   image:
     repository: pushpakumara/kubepulse-frontend
     tag: "1.0.0"
+  svc:
+    type: LoadBalancer
 
 ingress:
   enabled: false

@@ -30,6 +30,7 @@ kind: Service
 metadata:
   name: {{ .Release.Name }}-frontend-svc
 spec:
+  type: "{{ .Values.frontend.svc.type }}"
   selector:
     app: frontend
   ports:
