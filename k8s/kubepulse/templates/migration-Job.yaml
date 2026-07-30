@@ -14,4 +14,11 @@ spec:
             name: {{ .Release.Name }}-config
         - secretRef:
             name: {{ .Release.Name }}-secret
+        resources:
+          requests:
+            cpu: "100m"   
+            memory: "128Mi" 
+          limits:
+            cpu: "250m"
+            memory: "256Mi"
       restartPolicy: Never
